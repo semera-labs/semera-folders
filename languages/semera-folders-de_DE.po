@@ -1,0 +1,195 @@
+# German translation of Semera Folders.
+msgid ""
+msgstr ""
+"Project-Id-Version: Semera Folders\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "The parent folder does not exist."
+msgstr "Der übergeordnete Ordner existiert nicht."
+
+msgid "A folder cannot be moved into itself."
+msgstr "Ein Ordner kann nicht in sich selbst verschoben werden."
+
+msgid "Please enter a folder name."
+msgstr "Bitte gib einen Ordnernamen ein."
+
+msgid "The folder name is too long."
+msgstr "Der Ordnername ist zu lang."
+
+msgid "The folder does not exist."
+msgstr "Der Ordner existiert nicht."
+
+msgid "A folder named \"%s\" already exists here."
+msgstr "Hier gibt es bereits einen Ordner mit dem Namen „%s“."
+
+msgid "Folder"
+msgstr "Ordner"
+
+msgid "Folders"
+msgstr "Ordner"
+
+msgid "New folder"
+msgstr "Neuer Ordner"
+
+msgid "New subfolder"
+msgstr "Neuer Unterordner"
+
+msgid "Rename"
+msgstr "Umbenennen"
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "The folders could not be loaded."
+msgstr "Die Ordner konnten nicht geladen werden."
+
+msgid "Something went wrong. Please try again."
+msgstr "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+
+msgid "Delete the folder \"%s\"? Its files and subfolders are not deleted; they move up one level."
+msgstr "Den Ordner „%s“ löschen? Seine Dateien und Unterordner werden nicht gelöscht, sondern eine Ebene nach oben verschoben."
+
+msgid "Move 1 file"
+msgstr "1 Datei verschieben"
+
+msgid "Move %d files"
+msgstr "%d Dateien verschieben"
+
+msgid "Move folder \"%s\""
+msgstr "Ordner „%s“ verschieben"
+
+msgid "1 file moved to \"%s\"."
+msgstr "1 Datei nach „%s“ verschoben."
+
+msgid "%1$d files moved to \"%2$s\"."
+msgstr "%1$d Dateien nach „%2$s“ verschoben."
+
+msgid "Folder moved."
+msgstr "Ordner verschoben."
+
+msgid "Nothing to update."
+msgstr "Nichts zu aktualisieren."
+
+msgid "Type"
+msgstr "Typ"
+
+msgid "Size"
+msgstr "Größe"
+
+msgid "Up one level"
+msgstr "Eine Ebene nach oben"
+
+msgid "1 item"
+msgstr "1 Element"
+
+msgid "%d items"
+msgstr "%d Elemente"
+
+msgid "Open"
+msgstr "Öffnen"
+
+msgid "No folder"
+msgstr "Kein Ordner"
+
+msgid "Media Library"
+msgstr "Mediathek"
+
+msgid "Loading…"
+msgstr "Wird geladen …"
+
+msgid "The preview could not be loaded."
+msgstr "Die Vorschau konnte nicht geladen werden."
+
+msgid "URL copied."
+msgstr "URL kopiert."
+
+msgid "The file does not exist."
+msgstr "Die Datei existiert nicht."
+
+msgid "Previous file"
+msgstr "Vorherige Datei"
+
+msgid "Next file"
+msgstr "Nächste Datei"
+
+msgid "Close"
+msgstr "Schließen"
+
+msgid "File name"
+msgstr "Dateiname"
+
+msgid "File type"
+msgstr "Dateityp"
+
+msgid "File size"
+msgstr "Dateigröße"
+
+msgid "Dimensions"
+msgstr "Abmessungen"
+
+msgid "Length"
+msgstr "Länge"
+
+msgid "Uploaded"
+msgstr "Hochgeladen"
+
+msgid "Uploaded by"
+msgstr "Hochgeladen von"
+
+msgid "Uploaded to"
+msgstr "Hochgeladen zu"
+
+msgid "Alt text"
+msgstr "Alternativtext"
+
+msgid "Caption"
+msgstr "Bildunterschrift"
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "Sizes"
+msgstr "Größen"
+
+msgid "File URL"
+msgstr "Datei-URL"
+
+msgid "Copy URL"
+msgstr "URL kopieren"
+
+msgid "Edit"
+msgstr "Bearbeiten"
+
+msgid "Open file"
+msgstr "Datei öffnen"
+
+msgid "Download"
+msgstr "Herunterladen"
+
+msgid "Your browser cannot show this PDF. Use \"Open file\" to view it."
+msgstr "Dein Browser kann dieses PDF nicht anzeigen. Öffne es mit „Datei öffnen“."
+
+msgid "Detach"
+msgstr "Lösen"
+
+msgid "Unattached"
+msgstr "Nicht angehängt"
+
+msgid "Attach"
+msgstr "Anhängen"
+
+msgid "Drop files to upload"
+msgstr "Dateien zum Hochladen hier ablegen"
+
+msgid "Uploading %1$d of %2$d …"
+msgstr "Lade %1$d von %2$d hoch …"
+
+msgid "\"%s\" is larger than the upload limit."
+msgstr "„%s“ ist größer als das Upload-Limit."
+
+msgid "Upload of \"%1$s\" failed: %2$s"
+msgstr "Das Hochladen von „%1$s“ ist fehlgeschlagen: %2$s"

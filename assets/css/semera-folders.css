@@ -1,0 +1,745 @@
+/**
+ * Semera Folders
+ *
+ * The open folder's subfolders show up next to its files:
+ *   .sf-details    rows in the library's list view (class on its .wrap)
+ *   .sf-explorer   folder tiles inside wp.media's .attachments-browser
+ *                  (grid view and media modal)
+ */
+
+.sf-foldergrid,
+.sf-details {
+	--sf-accent: var(--wp-admin-theme-color, #2271b1);
+	--sf-accent-rgb: var(--wp-admin-theme-color--rgb, 34, 113, 177);
+	--sf-text: #1d2327;
+	--sf-muted: #646970;
+	--sf-line: #dcdcde;
+	--sf-hover: #f0f0f1;
+	--sf-folder: #f4b942;
+}
+
+/* ---------- "New folder" button (list view, where the bulk actions were) ---------- */
+
+.sf-newfolder.button {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	min-height: 30px;
+	padding: 0 12px 0 8px;
+}
+
+.sf-newfolder .sf-icon {
+	width: 16px;
+	height: 16px;
+}
+
+.sf-details .tablenav .sf-newfolder-wrap {
+	margin-right: 8px;
+}
+
+tr.sf-folder-row:focus-visible,
+.sf-foldertile:focus-visible .attachment-preview,
+.sf-menu button:focus-visible {
+	outline: 2px solid var(--sf-accent, #2271b1);
+	outline-offset: -2px;
+}
+
+/* ---------- icons ---------- */
+
+.sf-icon {
+	display: inline-flex;
+	flex: none;
+	width: 18px;
+	height: 18px;
+}
+
+.sf-icon svg {
+	width: 100%;
+	height: 100%;
+}
+
+.sf-fill {
+	fill: var(--sf-folder, #f4b942);
+}
+
+.sf-ico-up {
+	color: var(--sf-muted, #646970);
+}
+
+/* ---------- wp.media: grid view and media modal ---------- */
+
+.sf-explorer {
+	box-sizing: border-box;
+}
+
+.sf-foldergrid {
+	display: flow-root;
+	margin: 0;
+	padding: 2px 8px 0;
+	list-style: none;
+}
+
+.sf-foldergrid[hidden] {
+	display: none;
+}
+
+/* The modal lays its content out absolutely: the folders sit under the toolbar and push the files down. */
+.media-modal .attachments-browser.sf-has-explorer > .sf-explorer {
+	position: absolute;
+	top: 72px;
+	right: 300px;
+	left: 0;
+	z-index: 3;
+}
+
+.media-modal .attachments-browser.sf-has-explorer.hide-sidebar > .sf-explorer {
+	right: 0;
+}
+
+.media-modal .attachments-browser.sf-has-explorer.has-load-more > .attachments-wrapper,
+.media-modal .attachments-browser.sf-has-explorer:not(.has-load-more) > .attachments,
+.media-modal .attachments-browser.sf-has-explorer > .uploader-inline {
+	margin-top: var(--sf-top, 0px);
+}
+
+@media (max-width: 900px) {
+	.media-modal .attachments-browser.sf-has-explorer > .sf-explorer {
+		right: 262px;
+	}
+
+	.media-modal .attachments-browser.sf-has-explorer.hide-sidebar > .sf-explorer {
+		right: 0;
+	}
+}
+
+/* Folder tiles are `li.attachment`s, so core gives them the size of a file tile. */
+.sf-foldertile .attachment-preview,
+.sf-foldertile-new .attachment-preview {
+	overflow: hidden;
+	background: #f0f0f1;
+}
+
+.sf-foldertile-icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 18%;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sf-foldertile-icon .sf-icon {
+	width: 46%;
+	height: 46%;
+}
+
+.sf-foldertile-label {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 6px;
+	box-sizing: border-box;
+	min-height: 28px;
+	padding: 4px 8px;
+	background: #fff;
+	color: var(--sf-text, #1d2327);
+	font-size: 12px;
+	font-weight: 600;
+	text-align: left;
+}
+
+.sf-foldertile-name {
+	flex: 1;
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.sf-foldertile-count {
+	color: var(--sf-muted, #646970);
+	font-size: 11px;
+	font-weight: 400;
+}
+
+.sf-foldertile:hover .attachment-preview {
+	background: #e8e8e9;
+}
+
+.sf-foldertile-new .attachment-preview {
+	border: 2px dashed #c3c4c7;
+	box-shadow: none;
+	background: #fff;
+}
+
+.sf-foldertile-new .sf-foldertile-icon .sf-icon {
+	width: 30%;
+	height: 30%;
+	color: var(--sf-muted, #646970);
+}
+
+.sf-foldertile-new:hover .attachment-preview {
+	border-color: var(--sf-accent, #2271b1);
+}
+
+.sf-foldertile-new:hover .sf-foldertile-icon .sf-icon {
+	color: var(--sf-accent, #2271b1);
+}
+
+.sf-rename {
+	flex: 1;
+	min-width: 0;
+	height: 24px;
+	margin: 0;
+	padding: 0 6px;
+	border: 1px solid var(--sf-accent, #2271b1);
+	border-radius: 3px;
+	box-shadow: none;
+	background: #fff;
+	color: var(--sf-text, #1d2327);
+	font: inherit;
+	line-height: 22px;
+}
+
+.sf-foldertile.sf-drop .attachment-preview,
+tr.sf-folder-row.sf-drop {
+	background: rgba(var(--sf-accent-rgb), 0.18);
+	outline: 1px dashed var(--sf-accent);
+	outline-offset: -1px;
+}
+
+/* Things that can be dragged: keep the image from starting a file drag of its own. */
+.attachments-browser li.attachment[draggable="true"] img,
+table.wp-list-table.media tbody tr[draggable="true"] img {
+	pointer-events: none;
+}
+
+/* ---------- library list view: compact details list like Explorer ---------- */
+
+.sf-details table.wp-list-table.media {
+	table-layout: auto;
+}
+
+.sf-details table.wp-list-table.media tbody tr {
+	user-select: none;
+}
+
+.sf-details table.wp-list-table.media tbody th,
+.sf-details table.wp-list-table.media tbody td {
+	padding: 3px 10px;
+	vertical-align: middle;
+	line-height: 1.35;
+}
+
+.sf-details table.wp-list-table.media tbody th.check-column {
+	padding: 3px 0 3px 3px;
+}
+
+.sf-details table.wp-list-table.media tbody td.column-title {
+	position: relative;
+}
+
+.sf-details table.wp-list-table.media .column-title strong {
+	display: block;
+	font-weight: 400;
+}
+
+.sf-details table.wp-list-table.media .column-title strong > a,
+.sf-details table.wp-list-table.media .column-title .sf-folder-edit {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	max-width: 100%;
+}
+
+.sf-details table.wp-list-table.media .column-title .media-icon {
+	float: none;
+	flex: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	min-height: 0;
+	margin: 0;
+}
+
+.sf-details table.wp-list-table.media .column-title .media-icon img {
+	width: 24px;
+	height: 24px;
+	max-width: 24px;
+	object-fit: cover;
+	border-radius: 2px;
+}
+
+.sf-details table.wp-list-table.media .column-title .filename {
+	display: none;
+}
+
+/*
+ * Every column but the file name only takes the room its content needs, so the
+ * name (and the row actions that appear on hover) get the rest of the table.
+ */
+.sf-details table.wp-list-table.media .column-sf_type,
+.sf-details table.wp-list-table.media .column-sf_size,
+.sf-details table.wp-list-table.media .column-author,
+.sf-details table.wp-list-table.media .column-parent,
+.sf-details table.wp-list-table.media .column-date {
+	width: 1%;
+	white-space: nowrap;
+}
+
+.sf-details table.wp-list-table.media .column-sf_type,
+.sf-details table.wp-list-table.media .column-sf_size {
+	color: #50575e;
+}
+
+/* A bit more room than its content, so the heading and the sort arrows stay on one line. */
+.sf-details table.wp-list-table.media .column-author {
+	min-width: 100px;
+}
+
+.sf-details table.wp-list-table.media .column-parent {
+	min-width: 150px;
+}
+
+/* Heading and sort arrows never wrap onto a second line. */
+.sf-details table.wp-list-table.media thead th.sortable a,
+.sf-details table.wp-list-table.media thead th.sorted a,
+.sf-details table.wp-list-table.media tfoot th.sortable a,
+.sf-details table.wp-list-table.media tfoot th.sorted a {
+	white-space: nowrap;
+}
+
+/* "Uploaded to" shows only the post; Attach / Detach are in the preview popup. */
+.sf-details table.wp-list-table.media .column-parent br,
+.sf-details table.wp-list-table.media .column-parent a.hide-if-no-js {
+	display: none;
+}
+
+/* Long author names and post titles are cut off, not allowed to widen their column. */
+.sf-details table.wp-list-table.media .column-author a,
+.sf-details table.wp-list-table.media .column-parent strong {
+	display: inline-block;
+	max-width: 140px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: bottom;
+}
+
+.sf-details table.wp-list-table.media .column-parent strong {
+	max-width: 110px;
+}
+
+@media (min-width: 783px) {
+	/* Row actions appear on hover at the right edge instead of adding a second line. */
+	.sf-details table.wp-list-table.media td.column-title .row-actions {
+		position: absolute;
+		top: 50%;
+		right: 8px;
+		left: auto;
+		padding: 0 0 0 12px;
+		background: inherit;
+		transform: translateY(-50%);
+		white-space: nowrap;
+		opacity: 0;
+	}
+
+	.sf-details table.wp-list-table.media tr:hover td.column-title .row-actions,
+	.sf-details table.wp-list-table.media tr:focus-within td.column-title .row-actions {
+		position: absolute;
+		left: auto;
+		opacity: 1;
+	}
+}
+
+/* Selected and hovered rows */
+.sf-details table.wp-list-table.media tbody tr:hover > th,
+.sf-details table.wp-list-table.media tbody tr:hover > td {
+	background-color: rgba(var(--sf-accent-rgb), 0.07);
+}
+
+.sf-details table.wp-list-table.media tbody tr.sf-selected > th,
+.sf-details table.wp-list-table.media tbody tr.sf-selected > td {
+	background: rgba(var(--sf-accent-rgb), 0.12);
+}
+
+.sf-details table.wp-list-table.media tbody tr.sf-selected:hover > th,
+.sf-details table.wp-list-table.media tbody tr.sf-selected:hover > td {
+	background: rgba(var(--sf-accent-rgb), 0.16);
+}
+
+/* Folder rows */
+tr.sf-folder-row .sf-icon {
+	width: 22px;
+	height: 22px;
+}
+
+tr.sf-folder-row .column-title a {
+	color: var(--sf-text);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+tr.sf-folder-row .column-title a:hover {
+	color: var(--sf-accent);
+}
+
+tr.sf-folder-row .sf-rename {
+	width: 260px;
+	max-width: 100%;
+	flex: none;
+}
+
+@media (max-width: 782px) {
+	tr.sf-folder-row td:not(.column-primary) {
+		display: none !important;
+	}
+}
+
+/* ---------- file preview popup (list view) ---------- */
+
+html.sf-preview-open {
+	overflow: hidden;
+}
+
+.sf-preview {
+	width: min(1000px, 94vw);
+	max-height: 90vh;
+	padding: 0;
+	border: 0;
+	border-radius: 8px;
+	box-shadow: 0 12px 48px rgba(0, 0, 0, 0.35);
+	background: #fff;
+	color: #1d2327;
+	overflow: hidden;
+}
+
+.sf-preview[open] {
+	display: block;
+}
+
+.sf-preview::backdrop {
+	background: rgba(0, 0, 0, 0.62);
+}
+
+.sf-preview-frame {
+	display: flex;
+	flex-direction: column;
+	max-height: 90vh;
+}
+
+.sf-preview-head {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 8px 10px 8px 16px;
+	border-bottom: 1px solid #dcdcde;
+}
+
+.sf-preview-title {
+	flex: 1;
+	min-width: 0;
+	margin: 0;
+	overflow: hidden;
+	font-size: 15px;
+	font-weight: 600;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.sf-preview-nav {
+	display: flex;
+}
+
+.sf-preview-nav button,
+.sf-preview-close {
+	width: 34px;
+	height: 34px;
+	padding: 0;
+	border: 0;
+	border-radius: 4px;
+	background: none;
+	color: #50575e;
+	font-size: 24px;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.sf-preview-nav button:hover:not(:disabled),
+.sf-preview-close:hover {
+	background: #f0f0f1;
+	color: #1d2327;
+}
+
+.sf-preview-nav button:disabled {
+	opacity: 0.3;
+	cursor: default;
+}
+
+.sf-preview-nav button:focus-visible,
+.sf-preview-close:focus-visible {
+	outline: 2px solid var(--wp-admin-theme-color, #2271b1);
+	outline-offset: -2px;
+}
+
+.sf-preview-body {
+	display: flex;
+	gap: 20px;
+	min-height: 260px;
+	padding: 16px;
+	overflow: auto;
+}
+
+.sf-preview-media {
+	display: flex;
+	flex: 1 1 55%;
+	align-items: center;
+	justify-content: center;
+	align-self: flex-start;
+	box-sizing: border-box;
+	min-width: 0;
+	min-height: 220px;
+	padding: 12px;
+	border-radius: 6px;
+	background: #f0f0f1;
+}
+
+.sf-preview-image,
+.sf-preview-player {
+	display: block;
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	max-height: 62vh;
+	object-fit: contain;
+}
+
+.sf-preview-audio {
+	width: 100%;
+}
+
+.sf-preview-pdf {
+	display: block;
+	width: 100%;
+	height: 62vh;
+	min-height: 420px;
+	border: 0;
+	border-radius: 4px;
+	background: #fff;
+}
+
+.sf-preview-pdf p {
+	padding: 16px;
+	color: #50575e;
+}
+
+.sf-preview-badge {
+	padding: 18px 26px;
+	border-radius: 8px;
+	background: #fff;
+	color: #50575e;
+	font-size: 28px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+}
+
+.sf-preview-side {
+	flex: 1 1 45%;
+	min-width: 240px;
+}
+
+.sf-preview-media:has(.sf-preview-pdf) {
+	flex-basis: 62%;
+	align-self: stretch;
+}
+
+.sf-preview-info {
+	display: grid;
+	grid-template-columns: max-content minmax(0, 1fr);
+	gap: 6px 14px;
+	margin: 0;
+	font-size: 13px;
+}
+
+.sf-preview-info dt {
+	color: #646970;
+}
+
+.sf-preview-info dd {
+	margin: 0;
+	overflow-wrap: anywhere;
+}
+
+.sf-preview-url {
+	display: flex;
+	gap: 6px;
+}
+
+.sf-preview-url input {
+	flex: 1;
+	min-width: 0;
+	font-size: 12px;
+}
+
+.sf-preview-info .sf-preview-inline {
+	margin-left: 8px;
+}
+
+.sf-preview-sizes {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sf-preview-sizes span {
+	color: #646970;
+}
+
+.sf-preview-actions {
+	margin: 18px 0 0;
+}
+
+@media (max-width: 700px) {
+	.sf-preview-body {
+		flex-direction: column;
+	}
+
+	.sf-preview-media {
+		align-self: stretch;
+	}
+}
+
+/* Moving is done by drag and drop; the bulk actions dropdown is not needed in this view. */
+.sf-details .tablenav .bulkactions {
+	display: none;
+}
+
+/* ---------- upload by drag and drop ---------- */
+
+/* Core shows its upload overlay for any drag; ours are not uploads. */
+.sf-dragging .uploader-window {
+	display: none !important;
+}
+
+.sf-dropzone {
+	position: fixed;
+	z-index: 100000;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(var(--wp-admin-theme-color--rgb, 34, 113, 177), 0.78);
+	color: #fff;
+	font-size: 26px;
+	font-weight: 600;
+	pointer-events: none;
+}
+
+.sf-dropzone[hidden] {
+	display: none;
+}
+
+/* ---------- drag image ---------- */
+
+.sf-ghost {
+	position: fixed;
+	top: -200px;
+	left: -200px;
+	padding: 6px 12px;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	background: #fff;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+	color: #1d2327;
+	font-size: 13px;
+	white-space: nowrap;
+}
+
+/* ---------- context menu ---------- */
+
+.sf-menu {
+	position: fixed;
+	z-index: 170000;
+	min-width: 180px;
+	padding: 4px;
+	border: 1px solid #c3c4c7;
+	border-radius: 6px;
+	background: #fff;
+	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+	font-size: 13px;
+}
+
+.sf-menu button {
+	display: block;
+	width: 100%;
+	padding: 6px 12px;
+	border: 0;
+	border-radius: 4px;
+	background: none;
+	color: #1d2327;
+	font: inherit;
+	text-align: left;
+	cursor: pointer;
+}
+
+.sf-menu button:hover,
+.sf-menu button:focus {
+	background: var(--wp-admin-theme-color, #2271b1);
+	color: #fff;
+}
+
+.sf-menu button.is-danger {
+	color: #b32d2e;
+}
+
+.sf-menu button.is-danger:hover,
+.sf-menu button.is-danger:focus {
+	background: #b32d2e;
+	color: #fff;
+}
+
+.sf-menu-sep {
+	height: 1px;
+	margin: 4px 0;
+	background: #dcdcde;
+}
+
+/* ---------- toast ---------- */
+
+.sf-toast {
+	position: fixed;
+	bottom: 24px;
+	left: 50%;
+	z-index: 170001;
+	max-width: min(90vw, 480px);
+	padding: 10px 16px;
+	border-radius: 6px;
+	background: #1d2327;
+	color: #fff;
+	font-size: 13px;
+	opacity: 0;
+	pointer-events: none;
+	transform: translate(-50%, 8px);
+	transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.sf-toast.is-visible {
+	opacity: 1;
+	transform: translate(-50%, 0);
+}
+
+.sf-toast[data-type="error"] {
+	background: #b32d2e;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sf-toast {
+		transition: none;
+	}
+}

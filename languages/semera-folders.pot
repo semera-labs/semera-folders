@@ -1,0 +1,256 @@
+# Semera Folders translation template.
+msgid ""
+msgstr ""
+"Project-Id-Version: Semera Folders\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: semera-folders\n"
+
+#: includes/Folders.php:129
+msgid "The parent folder does not exist."
+msgstr ""
+
+#: includes/Folders.php:189
+msgid "A folder cannot be moved into itself."
+msgstr ""
+
+#: includes/Folders.php:406
+msgid "Please enter a folder name."
+msgstr ""
+
+#: includes/Folders.php:409
+msgid "The folder name is too long."
+msgstr ""
+
+#: includes/Folders.php:467
+msgid "The folder does not exist."
+msgstr ""
+
+#: includes/Folders.php:474
+msgid "A folder named \"%s\" already exists here."
+msgstr ""
+
+#: includes/ListView.php:75 includes/ListView.php:77 includes/Media.php:306
+msgid "New folder"
+msgstr ""
+
+#: includes/ListView.php:119 includes/Media.php:311
+msgid "Up one level"
+msgstr ""
+
+#: includes/ListView.php:156 includes/Media.php:201 includes/Media.php:333 includes/Preview.php:93
+msgid "Folder"
+msgstr ""
+
+#: includes/ListView.php:159 includes/Media.php:334
+msgid "1 item"
+msgstr ""
+
+#: includes/ListView.php:159 includes/Media.php:336
+msgid "%d items"
+msgstr ""
+
+#: includes/Media.php:100
+msgid "Type"
+msgstr ""
+
+#: includes/Media.php:101
+msgid "Size"
+msgstr ""
+
+#: includes/Media.php:186 includes/Media.php:305 includes/Preview.php:93
+msgid "No folder"
+msgstr ""
+
+#: includes/Media.php:303
+msgid "Folders"
+msgstr ""
+
+#: includes/Media.php:304
+msgid "Media Library"
+msgstr ""
+
+#: includes/Media.php:307
+msgid "New subfolder"
+msgstr ""
+
+#: includes/Media.php:308
+msgid "Rename"
+msgstr ""
+
+#: includes/Media.php:309
+msgid "Delete"
+msgstr ""
+
+#: includes/Media.php:310
+msgid "Open"
+msgstr ""
+
+#: includes/Media.php:312
+msgid "The folders could not be loaded."
+msgstr ""
+
+#: includes/Media.php:313
+msgid "Something went wrong. Please try again."
+msgstr ""
+
+#: includes/Media.php:314
+msgid "Delete the folder \"%s\"? Its files and subfolders are not deleted; they move up one level."
+msgstr ""
+
+#: includes/Media.php:315
+msgid "Move 1 file"
+msgstr ""
+
+#: includes/Media.php:317
+msgid "Move %d files"
+msgstr ""
+
+#: includes/Media.php:318
+msgid "Move folder \"%s\""
+msgstr ""
+
+#: includes/Media.php:319
+msgid "1 file moved to \"%s\"."
+msgstr ""
+
+#: includes/Media.php:321
+msgid "%1$d files moved to \"%2$s\"."
+msgstr ""
+
+#: includes/Media.php:322
+msgid "Folder moved."
+msgstr ""
+
+#: includes/Media.php:323
+msgid "Loading…"
+msgstr ""
+
+#: includes/Media.php:324
+msgid "Drop files to upload"
+msgstr ""
+
+#: includes/Media.php:326
+msgid "Uploading %1$d of %2$d …"
+msgstr ""
+
+#: includes/Media.php:328
+msgid "\"%s\" is larger than the upload limit."
+msgstr ""
+
+#: includes/Media.php:330
+msgid "Upload of \"%1$s\" failed: %2$s"
+msgstr ""
+
+#: includes/Media.php:331
+msgid "The preview could not be loaded."
+msgstr ""
+
+#: includes/Media.php:332
+msgid "URL copied."
+msgstr ""
+
+#: includes/Preview.php:23 includes/Preview.php:23
+msgid "Previous file"
+msgstr ""
+
+#: includes/Preview.php:24 includes/Preview.php:24
+msgid "Next file"
+msgstr ""
+
+#: includes/Preview.php:26 includes/Preview.php:26
+msgid "Close"
+msgstr ""
+
+#: includes/Preview.php:42
+msgid "The file does not exist."
+msgstr ""
+
+#: includes/Preview.php:52
+msgid "File name"
+msgstr ""
+
+#: includes/Preview.php:53
+msgid "File type"
+msgstr ""
+
+#: includes/Preview.php:57
+msgid "File size"
+msgstr ""
+
+#: includes/Preview.php:60
+msgid "Dimensions"
+msgstr ""
+
+#: includes/Preview.php:63
+msgid "Length"
+msgstr ""
+
+#: includes/Preview.php:66
+msgid "Uploaded"
+msgstr ""
+
+#: includes/Preview.php:69
+msgid "Uploaded by"
+msgstr ""
+
+#: includes/Preview.php:84
+msgid "Detach"
+msgstr ""
+
+#: includes/Preview.php:87
+msgid "Unattached"
+msgstr ""
+
+#: includes/Preview.php:88
+msgid "Attach"
+msgstr ""
+
+#: includes/Preview.php:90
+msgid "Uploaded to"
+msgstr ""
+
+#: includes/Preview.php:97
+msgid "Alt text"
+msgstr ""
+
+#: includes/Preview.php:98
+msgid "Caption"
+msgstr ""
+
+#: includes/Preview.php:99
+msgid "Description"
+msgstr ""
+
+#: includes/Preview.php:109
+msgid "Sizes"
+msgstr ""
+
+#: includes/Preview.php:113 includes/Preview.php:117
+msgid "File URL"
+msgstr ""
+
+#: includes/Preview.php:118
+msgid "Copy URL"
+msgstr ""
+
+#: includes/Preview.php:130
+msgid "Edit"
+msgstr ""
+
+#: includes/Preview.php:132
+msgid "Open file"
+msgstr ""
+
+#: includes/Preview.php:133
+msgid "Download"
+msgstr ""
+
+#: includes/Preview.php:162
+msgid "Your browser cannot show this PDF. Use \"Open file\" to view it."
+msgstr ""
+
+#: includes/Rest.php:128
+msgid "Nothing to update."
+msgstr ""
