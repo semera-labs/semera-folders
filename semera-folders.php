@@ -6,8 +6,8 @@
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            semera
- * License:           PolyForm-Noncommercial-1.0.0
- * License URI:       https://polyformproject.org/licenses/noncommercial/1.0.0
+ * License:           GPL-2.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       semera-folders
  * Domain Path:       /languages
  */

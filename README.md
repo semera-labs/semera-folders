@@ -3,7 +3,7 @@
 <p align="center"><em>Folders for the WordPress media library, modelled on Windows Explorer.</em></p>
 
 [![Version](https://img.shields.io/badge/version-0.1.2-blue.svg)](./semera-folders.php)
-[![License](https://img.shields.io/badge/license-PolyForm%20Noncommercial-orange.svg)](./LICENSE)
+[![License](https://img.shields.io/badge/license-GPL--2.0--or--later-blue.svg)](./LICENSE)
 [![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-21759b.svg?logo=wordpress)](https://wordpress.org)
 [![PHP](https://img.shields.io/badge/PHP-7.4%2B-777bb4.svg?logo=php)](https://php.net)
 [![Vanilla JS](https://img.shields.io/badge/frontend-vanilla%20JS-f7df1e.svg?logo=javascript&logoColor=black)](./assets/js/semera-folders.js)
@@ -139,4 +139,4 @@ pwsh bin/build-zip.ps1                       # dist/semera-folders-<version>.zip
 
 * **Jan Schulz-Nigmann / Semera**
 * Copyright © 2026 Jan Schulz-Nigmann / Semera
-* License: [PolyForm Noncommercial 1.0.0](./LICENSE) plus an explicit permission for non-profit organizations. Free for noncommercial use and for non-profits of any kind (associations, clubs, churches, charities, schools). **Commercial use needs a separate license** from Semera.
+* License: [GPL-2.0-or-later](./LICENSE). Free for everyone, including commercial use. Modified versions must stay under the GPL.
