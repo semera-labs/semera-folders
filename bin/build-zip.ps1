@@ -12,7 +12,7 @@ $dist    = Join-Path $root 'dist'
 $zipPath = Join-Path $dist "$slug-$version.zip"
 
 # Everything below is left out (matched against the path relative to the plugin folder).
-$exclude = @('^\.git/', '^\.claude/', '^bin/', '^dist/', '^node_modules/', '^CLAUDE\.md$', '^\.editorconfig$', '^\.gitignore$', '\.zip$')
+$exclude = @('^\.git/', '^\.claude/', '^bin/', '^dist/', '^docs/', '^node_modules/', '^CLAUDE\.md$', '^\.editorconfig$', '^\.gitignore$', '\.zip$')
 
 New-Item -ItemType Directory -Force $dist | Out-Null
 if (Test-Path $zipPath) { Remove-Item $zipPath }

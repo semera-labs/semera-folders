@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./docs/icon.png" alt="Semera Folders icon" width="80"/>
+</p>
+
 <h1 align="center">Semera Folders</h1>
 
 <p align="center"><em>Folders for the WordPress media library, modelled on Windows Explorer.</em></p>
@@ -83,6 +87,7 @@ semera-folders/
 ├── assets/
 │   ├── js/semera-folders.js  # Folder rows/tiles, drag and drop, preview, uploads, wp.media hooks
 │   └── css/semera-folders.css
+├── docs/icon.png             # Icon for this README (not part of the release zip)
 ├── languages/                # .pot, German .po/.mo
 ├── bin/                      # i18n.py, sync-to-studio.ps1, build-zip.ps1
 └── README.md
